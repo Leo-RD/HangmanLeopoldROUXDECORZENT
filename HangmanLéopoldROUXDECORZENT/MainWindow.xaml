@@ -43,32 +43,32 @@
                     <ColumnDefinition Width="1*"/>
 
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" Name="B_A" Content="A" Click="B_A_Click"></Button>
-                <Button Grid.Row="0" Grid.Column="1" Name="B_B" Content="B" Click="B_B_Click"></Button>
-                <Button Grid.Row="0" Grid.Column="2" Name="B_C" Content="C" Click="B_C_Click"></Button>
-                <Button Grid.Row="0" Grid.Column="3" Name="B_D" Content="D" Click="B_D_Click"></Button>
-                <Button Grid.Row="0" Grid.Column="4" Name="B_E" Content="E" Click="B_E_Click"></Button>
-                <Button Grid.Row="0" Grid.Column="5" Name="B_F" Content="F" Click="B_F_Click"></Button>
-                <Button Grid.Row="1" Grid.Column="0" Name="B_G" Content="G" Click="B_G_Click"></Button>
-                <Button Grid.Row="1" Grid.Column="1" Name="B_H" Content="H" Click="B_H_Click"></Button>
-                <Button Grid.Row="1" Grid.Column="2" Name="B_I" Content="I" Click="B_I_Click"></Button>
-                <Button Grid.Row="1" Grid.Column="3" Name="B_J" Content="J" Click="B_J_Click"></Button>
-                <Button Grid.Row="1" Grid.Column="4" Name="B_K" Content="K" Click="B_K_Click"></Button>
-                <Button Grid.Row="1" Grid.Column="5" Name="B_L" Content="L" Click="B_L_Click"></Button>
-                <Button Grid.Row="2" Grid.Column="0" Name="B_M" Content="M" Click="B_M_Click"></Button>
-                <Button Grid.Row="2" Grid.Column="1" Name="B_N" Content="N" Click="B_N_Click"></Button>
-                <Button Grid.Row="2" Grid.Column="2" Name="B_O" Content="O" Click="B_O_Click"></Button>
-                <Button Grid.Row="2" Grid.Column="3" Name="B_P" Content="P" Click="B_P_Click"></Button>
-                <Button Grid.Row="2" Grid.Column="4" Name="B_Q" Content="Q" Click="B_Q_Click"></Button>
-                <Button Grid.Row="2" Grid.Column="5" Name="B_R" Content="R" Click="B_R_Click"></Button>
-                <Button Grid.Row="3" Grid.Column="0" Name="B_S" Content="S" Click="B_S_Click"></Button>
-                <Button Grid.Row="3" Grid.Column="1" Name="B_T" Content="T" Click="B_T_Click"></Button>
-                <Button Grid.Row="3" Grid.Column="2" Name="B_U" Content="U" Click="B_U_Click"></Button>
-                <Button Grid.Row="3" Grid.Column="3" Name="B_V" Content="V" Click="B_V_Click"></Button>
-                <Button Grid.Row="3" Grid.Column="4" Name="B_W" Content="W" Click="B_W_Click"></Button>
-                <Button Grid.Row="3" Grid.Column="5" Name="B_X" Content="X" Click="B_X_Click"></Button>
-                <Button Grid.Row="4" Grid.Column="2" Name="B_Y" Content="Y" Click="B_Y_Click"></Button>
-                <Button Grid.Row="4" Grid.Column="3" Name="B_Z" Content="Z" Click="B_Z_Click"></Button>
+                <Button Grid.Row="0" Grid.Column="0" Name="B_A" Content="A" Click="BTN_Click"></Button>
+                <Button Grid.Row="0" Grid.Column="1" Name="B_B" Content="B" Click="BTN_Click"></Button>
+                <Button Grid.Row="0" Grid.Column="2" Name="B_C" Content="C" Click="BTN_Click"></Button>
+                <Button Grid.Row="0" Grid.Column="3" Name="B_D" Content="D" Click="BTN_Click"></Button>
+                <Button Grid.Row="0" Grid.Column="4" Name="B_E" Content="E" Click="BTN_Click"></Button>
+                <Button Grid.Row="0" Grid.Column="5" Name="B_F" Content="F" Click="BTN_Click"></Button>
+                <Button Grid.Row="1" Grid.Column="0" Name="B_G" Content="G" Click="BTN_Click"></Button>
+                <Button Grid.Row="1" Grid.Column="1" Name="B_H" Content="H" Click="BTN_Click"></Button>
+                <Button Grid.Row="1" Grid.Column="2" Name="B_I" Content="I" Click="BTN_Click"></Button>
+                <Button Grid.Row="1" Grid.Column="3" Name="B_J" Content="J" Click="BTN_Click"></Button>
+                <Button Grid.Row="1" Grid.Column="4" Name="B_K" Content="K" Click="BTN_Click"></Button>
+                <Button Grid.Row="1" Grid.Column="5" Name="B_L" Content="L" Click="BTN_Click"></Button>
+                <Button Grid.Row="2" Grid.Column="0" Name="B_M" Content="M" Click="BTN_Click"></Button>
+                <Button Grid.Row="2" Grid.Column="1" Name="B_N" Content="N" Click="BTN_Click"></Button>
+                <Button Grid.Row="2" Grid.Column="2" Name="B_O" Content="O" Click="BTN_Click"></Button>
+                <Button Grid.Row="2" Grid.Column="3" Name="B_P" Content="P" Click="BTN_Click"></Button>
+                <Button Grid.Row="2" Grid.Column="4" Name="B_Q" Content="Q" Click="BTN_Click"></Button>
+                <Button Grid.Row="2" Grid.Column="5" Name="B_R" Content="R" Click="BTN_Click"></Button>
+                <Button Grid.Row="3" Grid.Column="0" Name="B_S" Content="S" Click="BTN_Click"></Button>
+                <Button Grid.Row="3" Grid.Column="1" Name="B_T" Content="T" Click="BTN_Click"></Button>
+                <Button Grid.Row="3" Grid.Column="2" Name="B_U" Content="U" Click="BTN_Click"></Button>
+                <Button Grid.Row="3" Grid.Column="3" Name="B_V" Content="V" Click="BTN_Click"></Button>
+                <Button Grid.Row="3" Grid.Column="4" Name="B_W" Content="W" Click="BTN_Click"></Button>
+                <Button Grid.Row="3" Grid.Column="5" Name="B_X" Content="X" Click="BTN_Click"></Button>
+                <Button Grid.Row="4" Grid.Column="2" Name="B_Y" Content="Y" Click="BTN_Click"></Button>
+                <Button Grid.Row="4" Grid.Column="3" Name="B_Z" Content="Z" Click="BTN_Click"></Button>
                 
 
 
