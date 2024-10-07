@@ -84,7 +84,7 @@
      
 <!--Grid Display-->
         <Grid Grid.Row="2">
-            <TextBox Grid.Row="0" Grid.ColumnSpan="4" Name="TB_Display" FontSize="10"></TextBox>
+            <TextBox Grid.Row="0" Grid.ColumnSpan="4" Name="TB_Display" FontSize="50"></TextBox>
         </Grid>
 
 <!--Grid Footer-->

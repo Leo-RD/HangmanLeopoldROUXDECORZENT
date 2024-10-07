@@ -23,15 +23,30 @@ namespace HangmanLéopoldROUXDECORZENT
         public MainWindow()
         {
             InitializeComponent();
+            setupGame();
         }
 
+        string GuessLetter;
+        int vies = 5;
 
-        private void setup ()
+        public TextBox HiddenWordTextBox { get; private set; }
+
+        private void setupGame()
         {
             //Initialisation du jeu
 
-            List<string> list = new List<string> {"vache","chien","guepe","koala","lapin","zebre","ecran","canon","epave","pomme" };
-         
+            List<string> list = new List<string> { "vache", "chien", "guepe", "koala", "lapin", "zebre", "ecran", "canon", "epave", "pomme" };
+            Random rnd = new Random();
+            int randomIndex = rnd.Next(0, list.Count);
+            string randomWord = list[randomIndex];
+            // Utilisez le mot aléatoire sélectionné pour continuer le jeu
+
+            int wordLength = randomWord.Length;
+            string hiddenWord = new string('*', wordLength);
+            // Afficher le mot caché avec des astérisques
+
+            DisplayHiddenWord(hiddenWord);
+
         }
 
 
@@ -43,7 +58,17 @@ namespace HangmanLéopoldROUXDECORZENT
             btn.IsEnabled = false;
             //Fonction Bouton
         }
+        private void DisplayHiddenWord(string hiddenWord)
+        {
+            TB_Display.Text = hiddenWord;
+        }
+         
+
+
+ 
 
         
+
+
     }
 }
