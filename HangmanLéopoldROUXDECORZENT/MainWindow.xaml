@@ -15,16 +15,16 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-<!--Grid Title-->
+        <!--Grid Title-->
         <Grid Grid.Row="0">
             <Label Content="HANGMAN GAME - Try to guess the word !" FontSize="30" FontFamily="Bookman Old Style" HorizontalAlignment="Center"></Label>
         </Grid>
-<!--/Grid game-->
+        <!--/Grid game-->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
-              
+
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
@@ -69,7 +69,7 @@
                 <Button Grid.Row="3" Grid.Column="5" Name="B_X" Content="X" Click="BTN_Click"></Button>
                 <Button Grid.Row="4" Grid.Column="2" Name="B_Y" Content="Y" Click="BTN_Click"></Button>
                 <Button Grid.Row="4" Grid.Column="3" Name="B_Z" Content="Z" Click="BTN_Click"></Button>
-                
+
 
 
 
@@ -77,23 +77,24 @@
 
             </Grid>
             <Grid Grid.Column="0">
-              
+                <TextBox HorizontalAlignment="Left" Margin="141,264,0,0" TextWrapping="Wrap" Text="Nombre de vies = 5" VerticalAlignment="Top" Width="250" Height="107" FontSize="25"/>
+
             </Grid>
         </Grid>
 
-     
-<!--Grid Display-->
+
+        <!--Grid Display-->
         <Grid Grid.Row="2">
             <TextBox Grid.Row="0" Grid.ColumnSpan="4" Name="TB_Display" FontSize="50"></TextBox>
         </Grid>
 
-<!--Grid Footer-->
+        <!--Grid Footer-->
         <Grid Grid.Row="3">
             <Label Content="© 2024 Léopold ROUX-DECORZENT - Hangman Game Ver. 1.0.0" FontSize="15" FontFamily="Bookman Old Style"></Label>
         </Grid>
 
-        
-<!--Grid Resources-->
+
+        <!--Grid Resources-->
         <Grid.Resources>
             <Style TargetType="{x:Type Button}">
                 <Setter Property="Margin" Value="5"/>
@@ -110,6 +111,6 @@
         </Grid.Resources>
     </Grid>
 
- 
+
 
 </Window>
