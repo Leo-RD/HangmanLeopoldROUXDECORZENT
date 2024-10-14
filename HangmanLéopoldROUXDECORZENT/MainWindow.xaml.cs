@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace HangmanLéopoldROUXDECORZENT
     public partial class MainWindow : Window
     {
         private string GuessLetter;
-        private int vies = 5;
+        private int vies = 7;
         private string randomWord;
 
         public MainWindow()
@@ -34,7 +35,28 @@ namespace HangmanLéopoldROUXDECORZENT
 
         private void setupGame()
         {
-            List<string> list = new List<string> { "vache", "chien", "guepe", "koala", "lapin", "zebre", "ecran", "canon", "epave", "pomme" };
+            string filePath = "../../Ressources/mots5lettres.txt"; // Chemin du fichier .txt
+            List<string> list = new List<string>();
+
+            try
+            {
+                string[] lines = File.ReadAllLines(filePath);
+                foreach (string line in lines)
+                {
+                    list.Add(line.Trim().ToLower());
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Le fichier 'mots.txt' n'a pas été trouvé.");
+                return;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur : " + ex.Message);
+                return;
+            }
+
             Random rnd = new Random();
             int randomIndex = rnd.Next(0, list.Count);
             randomWord = list[randomIndex].ToUpper();
@@ -96,8 +118,11 @@ namespace HangmanLéopoldROUXDECORZENT
 
         private void UpdateLifeCounter()
         {
-            TextBox lifeCounterTextBox = (TextBox)this.FindName("lifeCounterTextBox");
-            lifeCounterTextBox.Text = $"Nombre de vies = {vies}";
+            // Mettre à jour l'image en fonction des vies restantes
+            string imagePath = $"../../Ressources/images/{8 - vies}.png"; // 1.png pour 7 vies, 2.png pour 6 vies, etc.
+            lifeImage.Source = new BitmapImage(new Uri(imagePath, UriKind.Relative));
         }
+
+
     }
 }

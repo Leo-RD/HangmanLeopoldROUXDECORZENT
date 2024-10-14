@@ -94,8 +94,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\Images\" />
+    <Resource Include="Ressources\mots5lettres.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\images\2.png" />
+    <Resource Include="Ressources\images\3.png" />
+    <Resource Include="Ressources\images\4.png" />
+    <Resource Include="Ressources\images\5.png" />
+    <Resource Include="Ressources\images\6.png" />
+    <Resource Include="Ressources\images\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\images\1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
