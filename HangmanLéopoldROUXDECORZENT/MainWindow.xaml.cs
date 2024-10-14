@@ -41,6 +41,7 @@ namespace HangmanLéopoldROUXDECORZENT
             int wordLength = randomWord.Length;
             string hiddenWord = new string('*', wordLength);
             DisplayHiddenWord(hiddenWord);
+            UpdateLifeCounter(); // Call the UpdateLifeCounter method
         }
 
         public void runGame()
@@ -63,6 +64,7 @@ namespace HangmanLéopoldROUXDECORZENT
                 else
                 {
                     vies--;
+                    UpdateLifeCounter(); // Call the UpdateLifeCounter method
                 }
 
                 if (vies == 0)
@@ -92,6 +94,10 @@ namespace HangmanLéopoldROUXDECORZENT
             TB_Display.Text = hiddenWord;
         }
 
-
+        private void UpdateLifeCounter()
+        {
+            TextBox lifeCounterTextBox = (TextBox)this.FindName("lifeCounterTextBox");
+            lifeCounterTextBox.Text = $"Nombre de vies = {vies}";
+        }
     }
 }
