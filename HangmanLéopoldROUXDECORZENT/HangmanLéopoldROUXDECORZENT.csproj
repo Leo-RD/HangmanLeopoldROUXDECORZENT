@@ -94,7 +94,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="Ressources\mots5lettres.txt" />
   </ItemGroup>
@@ -108,6 +107,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Ressources\images\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ressources\Sound\MGS-Alert.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

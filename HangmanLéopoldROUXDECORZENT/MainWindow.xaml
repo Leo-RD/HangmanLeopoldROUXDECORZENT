@@ -92,7 +92,7 @@
 
         <!--Grid Footer-->
         <Grid Grid.Row="3">
-            <Label Content="© 2024 Léopold ROUX-DECORZENT - Hangman Game Ver. 1.0.0" FontSize="15" FontFamily="Bookman Old Style"></Label>
+            <Label Content="© October 2024 Léopold ROUX-DECORZENT - Hangman Game Ver. 2.0.0" FontSize="15" FontFamily="Bookman Old Style"></Label>
         </Grid>
 
 

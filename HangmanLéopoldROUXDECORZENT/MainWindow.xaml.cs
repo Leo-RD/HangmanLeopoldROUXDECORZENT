@@ -25,14 +25,25 @@ namespace HangmanLéopoldROUXDECORZENT
         private int vies = 7;
         private string randomWord;
 
+        private MediaPlayer playMedia = new MediaPlayer(); // instance du media player
+
         public MainWindow()
         {
             InitializeComponent();
             setupGame();
+            InitializeMediaPlayer();
+        }
+
+        //Fonction pour intialiser le media player
+        private void InitializeMediaPlayer()
+        {
+            var uri = new Uri("../../Resources/Sound/MGS-Alert.mp3", UriKind.Relative);
+            playMedia.Open(uri);
         }
 
         public TextBox HiddenWordTextBox { get; private set; }
 
+        //Fonction pour initialiser le jeu
         private void setupGame()
         {
             string filePath = "../../Ressources/mots5lettres.txt"; // Chemin du fichier .txt
@@ -63,9 +74,10 @@ namespace HangmanLéopoldROUXDECORZENT
             int wordLength = randomWord.Length;
             string hiddenWord = new string('*', wordLength);
             DisplayHiddenWord(hiddenWord);
-            UpdateLifeCounter(); // Call the UpdateLifeCounter method
+            UpdateLifeCounter(); // Appelle la fonction UpdateLifeCounter
         }
 
+        //Fonction pour lancer le jeu
         public void runGame()
         {
             if (GuessLetter != null)
@@ -86,22 +98,26 @@ namespace HangmanLéopoldROUXDECORZENT
                 else
                 {
                     vies--;
-                    UpdateLifeCounter(); // Call the UpdateLifeCounter method
+                    UpdateLifeCounter(); // Appelle la fonction UpdateLifeCounter
+                    PlaySound(); // Joue le son lorsque c'est faux
                 }
 
                 if (vies == 0)
                 {
                     MessageBox.Show("Défaite !");
+                    PlaySound(); // Joue le son lorsque c'est perdu 
                 }
 
                 if (TB_Display != null && !TB_Display.Text.Contains("*"))
                 {
                     MessageBox.Show("Victoire !");
+                    PlaySound(); // Joue le son lorsque c'est gagné
                 }
             }
             DisplayHiddenWord(TB_Display.Text);
         }
 
+        //Fonction pour gérer les boutons 
         private void BTN_Click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
@@ -111,11 +127,20 @@ namespace HangmanLéopoldROUXDECORZENT
             runGame();
         }
 
+        //Fonction pour jouer le son
+        private void PlaySound()
+        {
+            playMedia.Stop(); // Arrete le media player s'il est dejà en marche
+            playMedia.Play(); // Joue le son
+        }
+
+        //Fonction pour afficher le mot caché
         private void DisplayHiddenWord(string hiddenWord)
         {
             TB_Display.Text = hiddenWord;
         }
 
+        //Fonction pour gérer les vies & les images
         private void UpdateLifeCounter()
         {
             // Mettre à jour l'image en fonction des vies restantes
