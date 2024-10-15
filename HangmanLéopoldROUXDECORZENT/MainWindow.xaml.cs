@@ -37,8 +37,17 @@ namespace HangmanLéopoldROUXDECORZENT
         //Fonction pour intialiser le media player
         private void InitializeMediaPlayer()
         {
-            var uri = new Uri("../../Resources/Sound/MGS-Alert.mp3", UriKind.Relative);
-            playMedia.Open(uri);
+            try
+            {
+                var uri = new Uri("../../Resources/Sound/False" +
+                    ".mp3", UriKind.Relative);
+                playMedia.Open(uri);
+                playMedia.Volume = 1; // Set the volume to 100% (you can adjust this value to your liking)
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error initializing media player: " + ex.Message);
+            }
         }
 
         public TextBox HiddenWordTextBox { get; private set; }
@@ -102,7 +111,7 @@ namespace HangmanLéopoldROUXDECORZENT
                     PlaySound(); // Joue le son lorsque c'est faux
                 }
 
-                if (vies == 0)
+                if (vies == 1)
                 {
                     MessageBox.Show("Défaite !");
                     PlaySound(); // Joue le son lorsque c'est perdu 

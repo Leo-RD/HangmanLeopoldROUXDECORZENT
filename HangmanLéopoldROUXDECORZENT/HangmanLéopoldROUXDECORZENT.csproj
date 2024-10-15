@@ -109,7 +109,7 @@
     <Resource Include="Ressources\images\1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Ressources\Sound\MGS-Alert.mp3" />
+    <Content Include="Ressources\Sound\False.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
