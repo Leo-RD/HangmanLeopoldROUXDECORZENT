@@ -18,6 +18,7 @@
         <!--Grid Title-->
         <Grid Grid.Row="0">
             <Label Content="HANGMAN GAME - Try to guess the word !" FontSize="30" FontFamily="Bookman Old Style" HorizontalAlignment="Center"></Label>
+            <TextBlock Name="TimerTextBlock" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20" FontFamily="Bookman Old Style" Margin="10"/>
         </Grid>
         <!--/Grid game-->
         <Grid Grid.Row="1">

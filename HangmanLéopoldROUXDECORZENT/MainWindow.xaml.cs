@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace HangmanLéopoldROUXDECORZENT
 {
@@ -24,14 +25,19 @@ namespace HangmanLéopoldROUXDECORZENT
         private string GuessLetter;
         private int vies = 7;
         private string randomWord;
+        private DispatcherTimer gameTimer; 
+        private int timeLeft = 60; // Temps restant pour le jeu
 
         private MediaPlayer playMedia = new MediaPlayer(); // instance du media player
+
+       
 
         public MainWindow()
         {
             InitializeComponent();
             setupGame();
             InitializeMediaPlayer();
+            InitializeTimer(); // Appelle la fonction InitializeTimer
         }
 
         //Fonction pour intialiser le media player
@@ -39,8 +45,7 @@ namespace HangmanLéopoldROUXDECORZENT
         {
             try
             {
-                var uri = new Uri("../../Resources/Sound/False" +
-                    ".mp3", UriKind.Relative);
+                var uri = new Uri("../../Resources/Sound/False.mp3", UriKind.Relative);
                 playMedia.Open(uri);
                 playMedia.Volume = 1; // Set the volume to 100% (you can adjust this value to your liking)
             }
@@ -157,6 +162,33 @@ namespace HangmanLéopoldROUXDECORZENT
             lifeImage.Source = new BitmapImage(new Uri(imagePath, UriKind.Relative));
         }
 
+        //Fonction pour initialiser le timer
+        private void InitializeTimer()
+        {
+            gameTimer = new DispatcherTimer();
+            gameTimer.Interval = TimeSpan.FromSeconds(1);
+            gameTimer.Tick += GameTimer_Tick;
+            gameTimer.Start();
+        }
 
+        //Fonction pour gérer l'événement Tick du timer
+        private void GameTimer_Tick(object sender, EventArgs e)
+        {
+            timeLeft--;
+            UpdateTimerDisplay();
+
+            if (timeLeft <= 0)
+            {
+                gameTimer.Stop();
+                MessageBox.Show("Temps écoulé ! Défaite !");
+                PlaySound(); // Joue le son lorsque le temps est écoulé
+            }
+        }
+
+        //Fonction pour mettre à jour l'affichage du timer
+        private void UpdateTimerDisplay()
+        {
+            TimerTextBlock.Text = $"Temps restant : {timeLeft} secondes";
+        }
     }
 }
