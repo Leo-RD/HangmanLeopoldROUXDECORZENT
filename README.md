@@ -1,1 +1,1 @@
-Hangman game as a WPF App. V1 very simplistic without images or sound. Lives counter soon to be added. 
+Hangman game as a WPF App. V2 Complete W/ Lifecounter, timer, sound and images. 
