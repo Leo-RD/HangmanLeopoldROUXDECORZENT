@@ -120,14 +120,14 @@ namespace HangmanLéopoldROUXDECORZENT
                 {
                     MessageBox.Show("Défaite !");
                     PlaySound(); // Joue le son lorsque c'est perdu
-                    Application.Current.Shutdown();
+                    EndOfGame(); // Appelle la fonction EndOfGame
                 }
 
                 if (TB_Display != null && !TB_Display.Text.Contains("*"))
                 {
                     MessageBox.Show("Victoire !");
                     PlaySound(); // Joue le son lorsque c'est gagné
-                    Application.Current.Shutdown();
+                    EndOfGame(); // Appelle la fonction EndOfGame
                 }
             }
             DisplayHiddenWord(TB_Display.Text);
@@ -191,6 +191,12 @@ namespace HangmanLéopoldROUXDECORZENT
         private void UpdateTimerDisplay()
         {
             TimerTextBlock.Text = $"Temps restant : {timeLeft} secondes";
+        }
+
+        private void EndOfGame()
+        { 
+            MessageBox.Show("Fin du jeu ! L'application va se  fermer");
+            Application.Current.Shutdown();
         }
     }
 }
