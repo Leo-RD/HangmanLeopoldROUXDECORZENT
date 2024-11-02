@@ -45,9 +45,9 @@ namespace HangmanLéopoldROUXDECORZENT
         {
             try
             {
-                var uri = new Uri("../../Resources/Sound/False.mp3", UriKind.Relative);
+                var uri = new Uri("../../Ressources/Sound/False.mp3", UriKind.Relative);
                 playMedia.Open(uri);
-                playMedia.Volume = 1; // Set the volume to 100% (you can adjust this value to your liking)
+                playMedia.Volume = 100; // Set the volume to 100% (you can adjust this value to your liking)
             }
             catch (Exception ex)
             {
@@ -119,13 +119,15 @@ namespace HangmanLéopoldROUXDECORZENT
                 if (vies == 1)
                 {
                     MessageBox.Show("Défaite !");
-                    PlaySound(); // Joue le son lorsque c'est perdu 
+                    PlaySound(); // Joue le son lorsque c'est perdu
+                    Application.Current.Shutdown();
                 }
 
                 if (TB_Display != null && !TB_Display.Text.Contains("*"))
                 {
                     MessageBox.Show("Victoire !");
                     PlaySound(); // Joue le son lorsque c'est gagné
+                    Application.Current.Shutdown();
                 }
             }
             DisplayHiddenWord(TB_Display.Text);
