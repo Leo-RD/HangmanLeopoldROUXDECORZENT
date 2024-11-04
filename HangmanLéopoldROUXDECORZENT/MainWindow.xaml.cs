@@ -84,8 +84,8 @@ namespace HangmanLéopoldROUXDECORZENT
 
             Random rnd = new Random();
             int randomIndex = rnd.Next(0, list.Count);
-            randomWord = list[randomIndex].ToUpper();
-            int wordLength = randomWord.Length;
+            randomWord = list[randomIndex].ToUpper(); //Logique pour choisir un mot aléatoire
+            int wordLength = randomWord.Length; 
             string hiddenWord = new string('*', wordLength);
             DisplayHiddenWord(hiddenWord);
             UpdateLifeCounter(); // Appelle la fonction UpdateLifeCounter
@@ -196,7 +196,7 @@ namespace HangmanLéopoldROUXDECORZENT
         //Fonction pour gérer la fin du jeu
         private void EndOfGame()
         { 
-            MessageBox.Show("Fin du jeu ! L'application va se  fermer");
+            MessageBox.Show("Fin du jeu, merci d'avoir joué ! L'application va maintenant se fermer");
             Application.Current.Shutdown();
         }
     }
