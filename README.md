@@ -1,8 +1,8 @@
-# HangmanLeopoldROUXDECORZENT
+# Hangman
 
 ## Description
 
-**HangmanLeopoldROUXDECORZENT** est une application WPF développée en **C#** avec le framework **.NET**. Il s'agit d'une version interactive et graphique du jeu du pendu, permettant aux utilisateurs de jouer avec une interface conviviale et intuitive.
+**Hangman** est une application WPF développée en **C#** avec le framework **.NET**. Il s'agit d'une version interactive et graphique du jeu du pendu, permettant aux utilisateurs de jouer avec une interface conviviale et intuitive.
 
 ## Fonctionnalités
 
@@ -24,9 +24,9 @@ Avant de commencer, assurez-vous d'avoir :
 
 1. **Clonez le dépôt :**
    ```bash
-   git clone https://github.com/Leo-RD/HangmanLeopoldROUXDECORZENT.git
+   git clone https://github.com/Leo-RD/Hangman.git
 Accédez au répertoire du projet :
-cd HangmanLeopoldROUXDECORZENT
+cd Hangman
 Ouvrez le projet dans Visual Studio :
 Lancez Visual Studio.
 Cliquez sur Ouvrir un projet ou une solution et sélectionnez le fichier .csproj ou .sln.
@@ -55,4 +55,4 @@ Ce projet est sous licence MIT. Consultez le fichier LICENSE pour plus d'informa
 ## Contributions
 
 Les contributions sont les bienvenues ! 
-Merci d'avoir testé HangmanLeopoldROUXDECORZENT ! 🎉
+Merci d'avoir testé Hangman ! 🎉
