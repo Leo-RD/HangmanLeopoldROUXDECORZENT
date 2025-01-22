@@ -44,14 +44,15 @@ Captures d'écran
 
 Ajoutez ici des captures d'écran de l'application en action pour illustrer son interface.
 
-Auteur
+## Auteur
 
-Léopold Roux-Decorzent
-Licence
+**Léopold Roux-Decorzent**
+
+## Licence
 
 Ce projet est sous licence MIT. Consultez le fichier LICENSE pour plus d'informations.
 
-Contributions
+## Contributions
 
 Les contributions sont les bienvenues ! 
 Merci d'avoir testé HangmanLeopoldROUXDECORZENT ! 🎉
